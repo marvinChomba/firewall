@@ -32,6 +32,19 @@ log = core.getLogger()
 # Can be overriden on commandline.
 _flood_delay = 0
 
+MACS = []
+with open("./firewall/firewall-policies.csv", mode="r") as file1:
+  csv_reader = csv.DictReader(file1)
+  lines = 0
+  for i in csv_reader:
+    if lines == 0:
+      MACS.append(i["mac"])
+      lines +=1
+    else:
+      MACS.append(i["mac"])
+      lines +=1
+      
+
 class LearningSwitch (object):
   """
   The learning switch "brain" associated with a single OpenFlow switch.
