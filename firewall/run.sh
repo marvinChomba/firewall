@@ -8,7 +8,7 @@ cd ~/pox
 
 
 cd 
-sudo ./sdn.py
+sudo ./firewall/sdn.py
 
 pkill -9 pox.py
 
