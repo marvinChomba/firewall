@@ -3,8 +3,11 @@
 # Note: Mininet must be run as root.  So invoke this shell script
 # using sudo.
 
-#redirecting output
+cd ~/pox
+./pox.py forwarding.l2_learning
 
+
+cd 
 sudo ./sdn.py
 
 pkill -9 pox.py
